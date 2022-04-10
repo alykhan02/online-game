@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+            background: rgb(13, 209, 13);
+        }
+
+        #gameArea {
+            display: none;
+        }
+
+        #winning {
+            color: red;
+            text-align: center;
+        }
+    </style>
+    <title>Soccer Game</title>
+</head>
+<body>
+    <form id="userForm" action="">
+        <p id="playerWelcome">Enter your name and press GO</p>
+        <input id="userName" required maxlength="12" autocomplete="off" />
+        <button type="submit">GO</button>
+    </form>
+    <div id="gameArea">
+        <canvas id="canvas" width="640" tabindex="0" height="580"></canvas>
+        <br>
+        <h1 id="winning"></h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script src="movements.js"></script>
+    <script src="userInput.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
