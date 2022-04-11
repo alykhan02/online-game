@@ -835,7 +835,7 @@ function renderOnly(){
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 5502;
 app.use(express.static('public'))
 const server = app.listen(5500);
 const http = require('http').Server(app);

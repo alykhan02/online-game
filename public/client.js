@@ -1,5 +1,5 @@
-//const socket = io.connect('http://localhost:5500');
-const socket = io.connect();
+const socket = io.connect('http://localhost:5500');
+//const socket = io.connect();
 
 
 const canvas = document.getElementById('canvas');
