@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "engines": {
-    "node": "14.x"
+    "node": "16.13.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
-    "build": "node server",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node server",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +16,7 @@
     "express": "^4.17.3",
     "next": "^12.1.4",
     "nodemon": "^2.0.15",
+    "react-scripts": "^5.0.0",
     "socket.io": "^4.4.1"
   },
   "keywords": [],
