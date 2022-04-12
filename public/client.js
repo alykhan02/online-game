@@ -1,5 +1,5 @@
-//const socket = io.connect('http://localhost:5500');
-const socket = io.connect();
+const socket = io.connect('http://localhost:5500');
+//const socket = io.connect();
 
 
 const canvas = document.getElementById('canvas');
@@ -143,7 +143,7 @@ form.onsubmit = function(e) {
     form.style.display = 'none';
     gameAreaDiv.style.display = 'block';
     canvas.focus()
-    clientBalls[id].name = document.getElementById('userName').value;
-    socket.emit('clientName', clientBalls[id].name);
+    clientBalls[selfID].name = document.getElementById('userName').value;
+    socket.emit('clientName', clientBalls[selfID].name);
     return false;
 }
