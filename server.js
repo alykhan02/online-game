@@ -843,8 +843,8 @@ const http = require('http').Server(app);
 //    cors: { origin: '*'}
 //});
 const io = require('socket.io')(server);
-
-
+const cors = require('cors')
+app.use(cors())
 app.get('/', (req, res) => res.send(__dirname + '/index.html'));
 
 http.listen(PORT, function(){
