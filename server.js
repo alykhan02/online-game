@@ -845,7 +845,7 @@ const io = require('socket.io')(http, {
 //const io = require('socket.io')(server);
 //const cors = require('cors')
 //app.use(cors())
-app.get('/', (req, res) => res.send(__dirname + '/index.html'));
+app.get('/', (req, res) => res.send(__dirname + '/public/index.html'));
 
 http.listen(PORT, function(){
     console.log(`listening on ${PORT}`);

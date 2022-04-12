@@ -143,7 +143,7 @@ form.onsubmit = function(e) {
     form.style.display = 'none';
     gameAreaDiv.style.display = 'block';
     canvas.focus()
-    clientBalls[selfID].name = document.getElementById('userName').value;
-    socket.emit('clientName', clientBalls[selfID].name);
+    clientBalls[id].name = document.getElementById('userName').value;
+    socket.emit('clientName', clientBalls[id].name);
     return false;
 }
