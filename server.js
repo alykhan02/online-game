@@ -839,12 +839,12 @@ const PORT = process.env.PORT || 5502;
 app.use(express.static('public'))
 const server = app.listen(5500);
 const http = require('http').Server(app);
-//const io = require('socket.io')(server, {
-//    cors: { origin: '*'}
-//});
-const io = require('socket.io')(server);
-const cors = require('cors')
-app.use(cors())
+const io = require('socket.io')(http, {
+    cors: { origin: '*'}
+});
+//const io = require('socket.io')(server);
+//const cors = require('cors')
+//app.use(cors())
 app.get('/', (req, res) => res.send(__dirname + '/index.html'));
 
 http.listen(PORT, function(){
