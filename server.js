@@ -836,18 +836,19 @@ function renderOnly(){
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5502;
-app.use(express.static('public'))
-const server = app.listen(5500);
+const server = require('http').Server(app)
+app.use(express.static(__dirname + '/build'))
+//const server = app.listen(5500);
 const http = require('http').Server(app);
-const io = require('socket.io')(server, {
+const io = module.exports.io = require('socket.io')(server, {
     cors: { origin: '*'}
 });
 //const io = require('socket.io')(server);
 //const cors = require('cors')
 //app.use(cors())
-app.get('/', (req, res) => res.send(__dirname + '/public/index.html'));
+//app.get('/', (req, res) => res.send(__dirname + '/public/index.html'));
 
-http.listen(PORT, function(){
+server.listen(PORT, function(){
     console.log(`listening on ${PORT}`);
 })
 
