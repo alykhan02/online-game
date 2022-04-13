@@ -837,13 +837,14 @@ const express = require('express');
 const app = express();
 
 const PORT = process.env.PORT || 5500;
+app.use(express.static('public'));
 const server = app.listen(5500);
 const http = require('http').Server(app);
 const io = require('socket.io')(server, {
     cors: { origin: '*'}
 });
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'));
 
 
 
