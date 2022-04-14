@@ -1,0 +1,124 @@
+body {
+    background-image: url('champions-league.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+#canvas {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    background: rgb(13, 209, 13);
+    justify-content: center;
+}
+
+#gameArea {
+    display: none;
+}
+
+#winning {
+    color: red;
+    text-align: center;
+}
+
+input[type=text] {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    background-color: grey;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    color: white;
+  } 
+  
+  
+ .button {
+     padding: .5em;
+     background-color: white;
+     color: black;
+     border: 2px solid black;
+     transition-duration: 0.5s;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+     border-radius: .25em;
+ }
+
+ .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+ }
+  
+
+#title {
+    font-family: "Bangers", cursive;
+    font-size: 5vw;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    padding-bottom: 3rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+    color: white;
+  }
+  a {
+    font-family: 'Teko', sans-serif;
+    color: #4db1bc;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: center;
+    padding-bottom: 1rem;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #2d9da9;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+  }
+
+#controls {
+    width: 30%;
+    height: 30%;
+
+}
+
+#instructions {
+    font-family: "Bangers", cursive;
+    font-size: 3vw;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 2em;
+}
+
+#playerWelcome {
+    font-family: "Bangers", cursive;
+    font-size: 3vw;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+ 
+
+
+ 

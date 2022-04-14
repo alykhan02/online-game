@@ -1,5 +1,5 @@
-//const socket = io.connect('http://localhost:5500');
-const socket = io.connect();
+const socket = io.connect('http://localhost:5500');
+//const socket = io.connect();
 
 
 const canvas = document.getElementById('canvas');
@@ -32,7 +32,7 @@ socket.on('updateConnections', player => {
         }
         if(player.id === selfID){
             document.getElementById('playerWelcome').innerHTML = 
-                `Hello, enter your name and start to play in room: ${player.roomNo}`
+                `enter your name and find opponent to play in room: ${player.roomNo}`
             userInput(clientBalls[player.id]);
         }
     }
