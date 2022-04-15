@@ -12,7 +12,7 @@
         <h1 data-text="Alykhan's Soccer Game">Alykhan's Soccer Game</h2>
         
     </div>
-    <form id="userForm" action="">
+    <form id="userForm" class="userForm" action="">
         <p id="playerWelcome">Finding room...</p>
         <input type="text" id="userName" class="user" required maxlength="12" autocomplete="off" placeholder="Username"/>
         <br>
@@ -23,6 +23,26 @@
     </form>
     
     <div id="gameArea">
+        <!-- PL Scoreboard-->
+        <div class="pl-scoreboard">
+            <!-- Team home-->
+            <div class="team home">
+            <div class="color"></div>
+            <div class="name" id="firstName"><span></span></div>
+            </div>
+            <!-- Logo-->
+            <div class="logo"><img src="https://selimdoyranli.com/cdn/pl-scoreboard/pl-lion.svg" draggable="false"/></div>
+            <!-- Goals-->
+            <div class="goals">
+            <div class="goal home" id="homeGoals"><span></span></div>
+            <div class="divider"><span>-</span></div>
+            <div class="goal away" id="awayGoals"><span></span></div>
+            </div>
+            <div class="team away">
+            <div class="color"></div>
+            <div class="name" id="secondName"><span></span></div>
+            </div>
+        </div>
         <canvas id="canvas" width="640" tabindex="1" height="580"></canvas>
         <br>
         <h1 id="winning"></h1>

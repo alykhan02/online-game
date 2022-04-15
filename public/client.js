@@ -100,9 +100,11 @@ function userInterface(){
         if(clientBalls[id].no === 1){
             ctx.fillStyle = "blue";
             ctx.textAlign = "left";
-            ctx.fillText(clientBalls[id].score, 30, 30);
+            //ctx.fillText(clientBalls[id].score, 30, 30);
+            document.getElementById('homeGoals').innerHTML = clientBalls[id].score
             if(clientBalls[id].name){
-                ctx.fillText(clientBalls[id].name, 30, 70);
+                //ctx.fillText(clientBalls[id].name, 30, 70);
+                document.getElementById('firstName').innerHTML = clientBalls[id].name
             } else {
                 ctx.fillStyle = "black";
                 ctx.fillText("....", 30, 70);
@@ -110,9 +112,11 @@ function userInterface(){
         } else if(clientBalls[id].no === 2){
             ctx.fillStyle = "green";
             ctx.textAlign = "right";
-            ctx.fillText(clientBalls[id].score, 600, 30);
+            //ctx.fillText(clientBalls[id].score, 600, 30);
+            document.getElementById('awayGoals').innerHTML = clientBalls[id].score
             if(clientBalls[id].name){
-                ctx.fillText(clientBalls[id].name, 600, 70);
+                document.getElementById('secondName').innerHTML = clientBalls[id].name
+                //ctx.fillText(clientBalls[id].name, 600, 70);
             } else {
                 ctx.fillStyle = "black";
                 ctx.fillText("....", 600, 70);

@@ -6,6 +6,7 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    overflow: hidden;
   }
 #canvas {
     border: 1px solid black;
@@ -74,6 +75,7 @@ h1 {
     animation: glow 2s ease-in-out infinite alternate;
     text-align: center;
     color: white;
+    padding-bottom: 1em;
   }
   a {
     font-family: 'Teko', sans-serif;
@@ -116,6 +118,235 @@ h1 {
     text-align: center;
     color: white;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap");
+.pl-scoreboard {
+  padding-top: .5em;
+  justify-content: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation: showScoreboard 2s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  animation: showScoreboard 2s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.pl-scoreboard .team {
+  position: relative;
+  width: 102px;
+  height: 38px;
+  background-color: #34003a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+.pl-scoreboard .team .color {
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  top: 0;
+}
+.pl-scoreboard .team .name {
+  color: #fff;
+  font-size: 1.5vh;
+  top: -1px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.pl-scoreboard .team.home .color {
+  left: 0;
+  background-color: #1B449C; 
+}
+.pl-scoreboard .team.away .color {
+  right: 0;
+  background-color: #C8102E;
+}
+.pl-scoreboard .logo {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+.pl-scoreboard .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.pl-scoreboard .goals {
+  width: 102px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #00fc8a;
+  color: #34003a;
+  font-size: 1.6em;
+  font-weight: 700;
+  z-index: 2;
+}
+.pl-scoreboard .goals .goal,
+.pl-scoreboard .goals .divider {
+  position: relative;
+  top: -1px;
+}
+.pl-scoreboard .goals .divider {
+  margin: 0 2px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+.pl-scoreboard .time, .pl-scoreboard .extra-time {
+  position: absolute;
+  background-color: #fff;
+  width: 102px;
+  height: 38px;
+  top: 38px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4em;
+  color: #34003a;
+  font-weight: 700;
+  z-index: 2;
+}
+.pl-scoreboard .extra-time {
+  width: 51px;
+  left: calc(50% + 102px - 26px);
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: showExtratime 1.2s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  animation: showExtratime 1.2s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+@-webkit-keyframes showScoreboard {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-4em);
+    transform: translateY(-4em);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes showExtratime {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(-102px);
+    transform: translateX(-102px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@keyframes showScoreboard {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-4em);
+    transform: translateY(-4em);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes showExtratime {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(-102px);
+    transform: translateX(-102px);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+/* body {
+  background: url("https://user-images.githubusercontent.com/22690563/67150939-14a0b180-f2c7-11e9-8016-a993a397e1c5.jpg") no-repeat center/cover;
+  background-color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+body:before {
+  background-color: #222;
+  opacity: 0.5;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body:after {
+  content: "@selimdoyranli";
+  font-size: 0.8em;
+  color: #fff;
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  font-family: tahoma;
+} */
 
 
  
